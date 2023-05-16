@@ -1,0 +1,25 @@
+---
+export interface Props {
+	text: string;
+}
+
+const { text } = Astro.props;
+---
+
+<button class="btn">{text}</button>
+<style>
+    .btn{
+        color: hsl(257, 40%, 49%);
+        padding: 13px 60px;
+        border-radius: 20px;
+        border: none;
+
+        box-shadow: 0 6px 20px -10px #000;
+    }
+
+    .btn:hover{
+        cursor: pointer;
+        background-color: hsl(300, 69%, 71%);
+        color: #FFF;
+    }
+</style>

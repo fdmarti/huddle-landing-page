@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ImageBanner from '../components/ImageBanner.astro';
+import TextInformation from '../components/TextInformation.astro';
+import SocialMedia from '../components/SocialMedia.astro';
+---
+
+<Layout title='Huddle Home'>
+	<main>
+		<div class='main-content'>
+			<ImageBanner />
+			<TextInformation
+				text='Huddle re-imagines the way we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion'
+				title='Build The Community Your Fans Will Love'
+			/>
+		</div>
+		<SocialMedia />
+	</main>
+</Layout>
+
+<style>
+	.main-content {
+		display: flex;
+		justify-content: space-around;
+		padding: 40px 40px 0 40px;
+		gap: 5.5rem;
+	}
+
+	@media (max-width: 992px) {
+		.main-content {
+			flex-direction: column;
+			gap: 1rem;
+		}
+	}
+</style>

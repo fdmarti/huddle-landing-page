@@ -1,0 +1,46 @@
+---
+import Button from './Button.astro';
+
+export interface Props {
+	title: string;
+	text: string;
+}
+
+const { text, title } = Astro.props;
+---
+
+<section class='information-text'>
+	<h1>{title}</h1>
+	<p>{text}</p>
+	<Button text='Registrar' />
+</section>
+
+<style>
+	.information-text {
+		flex: 0 1 50%;
+	}
+
+	h1 {
+		font-size: 57px;
+		color: #fff;
+	}
+
+	p {
+		font-size: 23px;
+		color: #fff;
+	}
+
+	@media (max-width: 992px) {
+		.information-text {
+			text-align: center;
+		}
+
+		h1 {
+			font-size: 42px;
+		}
+
+		p {
+			font-size: 19px;
+		}
+	}
+</style>
